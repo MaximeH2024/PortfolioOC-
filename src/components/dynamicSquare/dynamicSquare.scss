@@ -17,7 +17,10 @@
 .square {
     width: 15px;
     height: 10px;
-    background-color: #0095FF;
     margin: 2px 0;
     transform-origin: bottom;
+    background: linear-gradient(45deg, #0095FF, #00D4FF); /* Gradient */
+    border-radius: 2px;
+    box-shadow: 0 0 5px #0095FF, 0 0 10px rgba(0, 149, 255, 0.5); /* Neon glow */
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth color transition */
 }

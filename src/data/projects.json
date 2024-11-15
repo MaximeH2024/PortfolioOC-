@@ -1,0 +1,366 @@
+[
+    {
+        "project_number": 1,
+        "type": {
+            "en": "training",
+            "fr": "formation"
+        },
+        "name": {
+            "en": "Start Your Web Developer Training",
+            "fr": "Démarrez votre formation de Développeur Web"
+        },
+        "status": {
+            "en": "Validated Project",
+            "fr": "Projet validé"
+        },
+        "description": {
+            "en": "Welcome to this first project! It marks the beginning of your OpenClassrooms training journey...",
+            "fr": "Bienvenue dans ce premier projet ! Il marque le début de votre parcours de formation OpenClassrooms..."
+        },
+        "technical_skills": {
+            "en": [
+                "Time management",
+                "Planning",
+                "Use of collaboration tools"
+            ],
+            "fr": [
+                "Gestion du temps",
+                "Planification",
+                "Utilisation d'outils de collaboration"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Communication",
+                "Autonomy",
+                "Organization"
+            ],
+            "fr": [
+                "Communication",
+                "Autonomie",
+                "Organisation"
+            ]
+        }
+    },
+    {
+        "project_number": 2,
+        "type": {
+            "en": "training",
+            "fr": "formation"
+        },
+        "name": {
+            "en": "Create the Homepage of a Travel Agency with HTML & CSS",
+            "fr": "Créez la page d'accueil d'une agence de voyage avec HTML & CSS"
+        },
+        "status": {
+            "en": "Validated Project",
+            "fr": "Projet validé"
+        },
+        "description": {
+            "en": "In this project, you will create the homepage of a travel agency using HTML and CSS...",
+            "fr": "Dans ce projet, vous créerez la page d'accueil d'une agence de voyage en utilisant HTML et CSS..."
+        },
+        "technical_skills": {
+            "en": [
+                "HTML",
+                "CSS",
+                "Responsive design",
+                "Use of Figma mockups"
+            ],
+            "fr": [
+                "HTML",
+                "CSS",
+                "Responsive design",
+                "Utilisation de maquettes Figma"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Attention to detail",
+                "Creativity",
+                "Analytical mindset"
+            ],
+            "fr": [
+                "Précision",
+                "Créativité",
+                "Esprit d'analyse"
+            ]
+        }
+    },
+    {
+        "project_number": 3,
+        "type": {
+            "en": "training",
+            "fr": "formation"
+        },
+        "name": {
+            "en": "Create a Dynamic Web Page with JavaScript",
+            "fr": "Créez une page web dynamique avec JavaScript"
+        },
+        "status": {
+            "en": "Validated Project",
+            "fr": "Projet validé"
+        },
+        "description": {
+            "en": "This project involves creating a dynamic web page for an interior architect using JavaScript...",
+            "fr": "Ce projet vous engage à créer une page web dynamique pour une architecte d'intérieur en utilisant JavaScript..."
+        },
+        "technical_skills": {
+            "en": [
+                "JavaScript",
+                "DOM manipulation",
+                "API handling",
+                "Modal development"
+            ],
+            "fr": [
+                "JavaScript",
+                "Manipulation du DOM",
+                "Gestion des API",
+                "Développement de modales"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Problem solving",
+                "Critical thinking",
+                "Adaptability"
+            ],
+            "fr": [
+                "Résolution de problèmes",
+                "Esprit critique",
+                "Adaptabilité"
+            ]
+        }
+    },
+    {
+        "project_number": 4,
+        "type": {
+            "en": "professional",
+            "fr": "professionnel"
+        },
+        "name": {
+            "en": "Debug and Optimize a Photographer's Site",
+            "fr": "Débuggez et optimisez un site de photographe"
+        },
+        "status": {
+            "en": "Validated Project",
+            "fr": "Projet validé"
+        },
+        "description": {
+            "en": "In this project, you will optimize a site in terms of performance, SEO, and accessibility...",
+            "fr": "Dans ce projet, vous optimiserez un site en termes de performance, SEO, et accessibilité..."
+        },
+        "technical_skills": {
+            "en": [
+                "SEO",
+                "Accessibility",
+                "Performance auditing with Lighthouse",
+                "Code optimization"
+            ],
+            "fr": [
+                "SEO",
+                "Accessibilité",
+                "Audit de performance avec Lighthouse",
+                "Optimisation de code"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Analytical mindset",
+                "Attention to detail",
+                "Continuous improvement"
+            ],
+            "fr": [
+                "Esprit d'analyse",
+                "Souci du détail",
+                "Capacité d'amélioration continue"
+            ]
+        }
+    },
+    {
+        "project_number": 5,
+        "type": {
+            "en": "training",
+            "fr": "formation"
+        },
+        "name": {
+            "en": "Create a Real Estate Rental Web Application with React",
+            "fr": "Créez une application web de location immobilière avec React"
+        },
+        "status": {
+            "en": "Validated Project",
+            "fr": "Projet validé"
+        },
+        "description": {
+            "en": "You will implement the front-end of an application using React and React Router for modern navigation...",
+            "fr": "Vous implémenterez le front-end d’une application en utilisant React et React Router..."
+        },
+        "technical_skills": {
+            "en": [
+                "React",
+                "React Router",
+                "SASS",
+                "CSS animations"
+            ],
+            "fr": [
+                "React",
+                "React Router",
+                "SASS",
+                "Animations CSS"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Creativity",
+                "UX awareness",
+                "Autonomy"
+            ],
+            "fr": [
+                "Créativité",
+                "Sens de l'UX",
+                "Travail en autonomie"
+            ]
+        }
+    },
+    {
+        "project_number": 6,
+        "type": {
+            "en": "professional",
+            "fr": "professionnel"
+        },
+        "name": {
+            "en": "Develop the Backend of a Book Rating Site",
+            "fr": "Développez le back-end d'un site de notation de livres"
+        },
+        "status": {
+            "en": "Validated Project",
+            "fr": "Projet validé"
+        },
+        "description": {
+            "en": "In this project, you will develop the backend for a book rating site using Express and MongoDB...",
+            "fr": "Dans ce projet, vous développerez le back-end pour un site de notation de livres en utilisant Express et MongoDB..."
+        },
+        "technical_skills": {
+            "en": [
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "CRUD operations",
+                "Data security",
+                "Mongoose"
+            ],
+            "fr": [
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Opérations CRUD",
+                "Sécurité des données",
+                "Mongoose"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Decision making",
+                "Project management",
+                "Collaboration"
+            ],
+            "fr": [
+                "Prise de décision",
+                "Gestion de projet",
+                "Collaboration"
+            ]
+        }
+    },
+    {
+        "project_number": 7,
+        "type": {
+            "en": "professional",
+            "fr": "professionnel"
+        },
+        "name": {
+            "en": "Plan the Development of Your Client's Website",
+            "fr": "Planifiez le développement du site de votre client"
+        },
+        "status": {
+            "en": "Validated Project",
+            "fr": "Projet validé"
+        },
+        "description": {
+            "en": "This project involves planning the development of a website for a client using project management tools like Notion...",
+            "fr": "Ce projet consiste à planifier le développement d'un site web pour un client en utilisant des outils de gestion de projet comme Notion..."
+        },
+        "technical_skills": {
+            "en": [
+                "Project management",
+                "Writing technical specifications",
+                "Kanban",
+                "Notion"
+            ],
+            "fr": [
+                "Gestion de projet",
+                "Rédaction de spécifications techniques",
+                "Kanban",
+                "Notion"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Communication",
+                "Leadership",
+                "Organization"
+            ],
+            "fr": [
+                "Communication",
+                "Leadership",
+                "Organisation"
+            ]
+        }
+    },
+    {
+        "project_number": 8,
+        "type": {
+            "en": "personal",
+            "fr": "personnel"
+        },
+        "name": {
+            "en": "Create and Publish Your Developer Portfolio",
+            "fr": "Créez et publiez votre portfolio de développeur"
+        },
+        "status": {
+            "en": "In progress",
+            "fr": "Projet en cours"
+        },
+        "description": {
+            "en": "This final project involves creating and publishing an online portfolio to showcase your skills and projects...",
+            "fr": "Ce dernier projet implique la création et la publication d'un portfolio en ligne pour présenter vos compétences et projets..."
+        },
+        "technical_skills": {
+            "en": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React.js",
+                "Deployment"
+            ],
+            "fr": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React.js",
+                "Déploiement"
+            ]
+        },
+        "soft_skills": {
+            "en": [
+                "Perseverance",
+                "Attention to detail",
+                "Synthesis skills"
+            ],
+            "fr": [
+                "Persévérance",
+                "Souci du détail",
+                "Esprit de synthèse"
+            ]
+        }
+    }
+]

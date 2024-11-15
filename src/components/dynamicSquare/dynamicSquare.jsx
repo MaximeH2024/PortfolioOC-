@@ -3,28 +3,36 @@ import './DynamicSquare.scss';
 
 export default function DynamicSquare() {
     const [columns, setColumns] = useState(() => {
-        // Initialisation avec un nombre de carrés aléatoire entre 1 et 6 pour chaque colonne
         return Array.from({ length: 20 }, () => Math.floor(Math.random() * 6) + 1);
     });
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // Mise à jour des colonnes pour créer un effet de vague en utilisant l'état précédent
             setColumns((prevColumns) => prevColumns.map((_, i) => {
-                // Utilisation d'une onde sinusoïdale avec un multiplicateur ajusté pour une plage entre 1 et 6 carrés
-                return Math.floor((Math.sin((Date.now() / 300) + i) + 1) * 3) + 1; 
-                // L'onde sinusoïdale oscille entre -1 et 1, donc * 2.5 + 1 donnera une plage entre 1 et 6
+                return Math.floor((Math.sin((Date.now() / 300) + i) + 1) * 3) + 1;
             }));
-        }, 100); // Met à jour l'animation toutes les 100ms pour un mouvement fluide
+        }, 100);
 
-        return () => clearInterval(interval); // Nettoyage de l'intervalle
+        return () => clearInterval(interval);
     }, []);
+
+    const generateColor = (baseColor, index) => {
+        const hueShift = (index * 10) % 360; // Moins de décalage de teinte pour conserver les nuances de bleu
+        return `hsl(${200 + hueShift}, 100%, 60%)`; // Modifie la teinte pour un bleu clair
+    };
 
     const renderColumns = () => {
         return columns.map((numSquares, i) => (
             <div key={i} className="column">
                 {Array.from({ length: numSquares }).map((_, j) => (
-                    <div key={j} className="square"></div>
+                    <div
+                        key={j}
+                        className="square"
+                        style={{
+                            background: `linear-gradient(45deg, ${generateColor('#0095FF', j)}, ${generateColor('#00D4FF', j)})`,
+                            boxShadow: `0 0 8px ${generateColor('#0095FF', j)}, 0 0 15px ${generateColor('#00D4FF', j)}`
+                        }}
+                    ></div>
                 ))}
             </div>
         ));
