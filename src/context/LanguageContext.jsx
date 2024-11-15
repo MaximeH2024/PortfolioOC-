@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 
 const LanguageContext = createContext();
 
+const translations = {
+    fr: {
+        title: 'Houguet Maxime - Développeur',
+    },
+    en: {
+        title: 'Houguet Maxime - Developer',
+    },
+};
+
 export function LanguageProvider({ children }) {
     const [language, setLanguage] = useState('fr');
 
     const toggleLanguage = (lang) => {
         setLanguage(lang);
-    };
-
-    const translations = {
-        fr: {
-            title: 'Houguet Maxime - Développeur',
-        },
-        en: {
-            title: 'Houguet Maxime - Developer',
-        },
     };
 
     return (
@@ -30,7 +30,6 @@ export function useLanguage() {
     return useContext(LanguageContext);
 }
 
-// PropTypes pour LanguageProvider
 LanguageProvider.propTypes = {
     children: PropTypes.node.isRequired,
 };

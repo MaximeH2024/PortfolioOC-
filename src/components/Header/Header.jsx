@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import HeaderLeft from '../headerLeft/headerLeft';
-import HeaderMain from '../headerMain/headerMain';
+import HeaderMain from '../HeaderMain/HeaderMain';
 import HeaderRight from '../headerRight/headerRight';
 import './header.scss';
 

@@ -10,7 +10,6 @@ export default function HeaderMain({ isMobile }) {
 
     return (
         <div className='header-main'>
-            {/* Afficher DynamicSquare uniquement si ce n'est pas en mode mobile */}
             {!isMobile && (
                 <div className='header-main-animation'>
                     <DynamicSquare />
@@ -32,8 +31,6 @@ export default function HeaderMain({ isMobile }) {
                     />
                 </div>
             </div>
-
-            {/* Afficher HeaderLeft et HeaderRight uniquement en mode mobile */}
             {isMobile && (
                 <div className="header-extra">
                     <HeaderLeft />
@@ -44,6 +41,6 @@ export default function HeaderMain({ isMobile }) {
     );
 }
 
-HeaderMain.PropTypes = {
+HeaderMain.propTypes = {
     isMobile: PropTypes.bool.isRequired,
 }

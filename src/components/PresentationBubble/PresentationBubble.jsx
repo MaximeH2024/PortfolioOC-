@@ -3,7 +3,7 @@ import './presentation-bubble.scss';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-export default function PresentationBubble({ color, text }) {
+export default function PresentationBubble({ color = '#000000', text = 'Texte par défaut' }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -26,10 +26,4 @@ export default function PresentationBubble({ color, text }) {
 PresentationBubble.propTypes = {
     color: PropTypes.string.isRequired, // color doit être une chaîne de caractères et est requis
     text: PropTypes.string.isRequired,  // text doit être une chaîne de caractères et est requis
-};
-
-// Valeurs par défaut (optionnel)
-PresentationBubble.defaultProps = {
-    color: '#000000',
-    text: 'Texte par défaut',
 };
