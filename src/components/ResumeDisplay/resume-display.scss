@@ -1,0 +1,32 @@
+@keyframes slideInBounce {
+    0% {
+        transform: translateX(100%);
+    }
+    70% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.resume-display {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease-out;
+
+    &.animate {
+        animation: slideInBounce 1s ease-out;
+        opacity: 1;
+        transform: translateX(0); // Position finale
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
