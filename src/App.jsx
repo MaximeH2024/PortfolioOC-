@@ -14,10 +14,12 @@ function App() {
             <div className='app'>
                 <Header />
                 <Presentation />
-                <div className="resume-container">
-                    <ResumeDisplay />
+                <div className='grid-background'>
+                    <div className="resume-container">
+                        <ResumeDisplay />
+                    </div>
+                    <SkillsDisplay />
                 </div>
-                <SkillsDisplay />
                 <FormationDisplay />
                 <ProjectDisplay />
                 <Footer />
