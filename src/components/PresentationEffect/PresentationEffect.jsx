@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import PresentationBubble from '../PresentationBubble/PresentationBubble';
+import PresentationData from '../../data/presentation.json';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function PresentationEffect() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const { language } = useLanguage(); // Récupération de la langue depuis le contexte
 
     useEffect(() => {
         const handleMouseMove = (e) => {
@@ -23,6 +26,11 @@ export default function PresentationEffect() {
             container.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
+
+    const getTextByLanguage = (id) => {
+        const data = PresentationData.find((item) => item.id === id);
+        return data ? data[`text_${language}`] : "Texte introuvable";
+    };
 
     return (
         <div className="presentation-effect">
@@ -44,7 +52,7 @@ export default function PresentationEffect() {
                 }}
             >
                 <div className="main-presentation-circle" style={{ color: "#CC4E4E" }}>
-                    <PresentationBubble color="#CC4E4E" text="Texte pour le main-circle" />
+                    <PresentationBubble color="#CC4E4E" text={getTextByLanguage(1)} className="bubble-text-1"/>
                 </div>
                 <div className="circle main-circle"></div>
                 <div className="circle-overlay main-circle-overlay"></div>
@@ -56,7 +64,7 @@ export default function PresentationEffect() {
                 }}
             >
                 <div className="second-presentation-circle" style={{ color: "#2ECC71" }}>
-                    <PresentationBubble color="#2ECC71" text="Texte pour le second-circle" />
+                    <PresentationBubble color="#2ECC71" text={getTextByLanguage(2)} className="bubble-text-2"/>
                 </div>
                 <div className="circle second-circle"></div>
                 <div className="circle-overlay second-circle-overlay"></div>
@@ -77,7 +85,7 @@ export default function PresentationEffect() {
                 }}
             >
                 <div className="third-presentation-circle" style={{ color: "#4A6EF5" }}>
-                    <PresentationBubble color="#4A6EF5" text="Texte pour le third-circle" />
+                    <PresentationBubble color="#4A6EF5" text={getTextByLanguage(3)} className="bubble-text-3"/>
                 </div>
                 <div className="circle fourth-circle"></div>
                 <div className="circle-overlay fourth-circle-overlay"></div>

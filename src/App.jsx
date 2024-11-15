@@ -6,6 +6,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import ProjectDisplay from './components/ProjectDisplay/ProjectDisplay';
 import ResumeDisplay from './components/ResumeDisplay/ResumeDisplay';
 import SkillsDisplay from './components/SkillsDisplay/SkillsDisplay';
+import FormationDisplay from './components/FormationDisplay/FormationDisplay';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                     <ResumeDisplay />
                 </div>
                 <SkillsDisplay />
+                <FormationDisplay />
                 <ProjectDisplay />
                 <Footer />
             </div>

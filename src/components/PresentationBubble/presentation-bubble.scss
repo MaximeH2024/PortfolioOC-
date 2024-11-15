@@ -1,92 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Faculty+Glyphic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
 .presentation-bubble {
-    position: relative;
+    position: absolute;
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.presentation-bubble:hover {
-    transform: scale(1.1);
-}
-
-.bubble-text {
-    position: absolute;
-    top: 60px;
+    background-color: black;
+    white-space: normal;
     color: white;
+    z-index: 1000;
+}
+
+.presentation-bubble p {
+    margin: 0;
+}
+
+.bubble-text-1 {
+    position: absolute;
+    width: 400px; /* Largeur fixe pour le rectangle */
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px dotted #0095FF;
     font-family: "Faculty Glyphic", sans-serif;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 8px 12px;
-    border-radius: 4px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    padding: 10px;
+    top: -50%; /* Centrer verticalement */
+    left: 100px; /* Positionner à droite de la bulle */
+    transform: translateY(-50%);
+    transform: translateZ(0);
+    white-space: normal;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.presentation-bubble:hover .bubble-text {
-    opacity: 1;
-}
-
-.main-presentation-circle,
-.second-presentation-circle,
-.third-presentation-circle {
+.bubble-text-2 {
     position: absolute;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: currentColor;
-    box-shadow: 0 0 50px currentColor, 0 0 50px rgba(255, 255, 255, 0.2);
-    z-index: 10;
-    
-}
-
-/* Définition de la bordure pulsante avec des délais */
-.main-presentation-circle::before,
-.second-presentation-circle::before,
-.third-presentation-circle::before {
-    content: "";
-    position: absolute;
+    width: 400px;
+    height: 210px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px dotted #0095FF;
+    padding: 5px;
     top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
-    border: 5px solid currentColor;
-    opacity: 1;
-    animation: pulsate-border 3s ease-out infinite;
+    left: -500px;
+    font-family: "Faculty Glyphic", sans-serif;
+    transform: translateY(-50%);
+    transform: translateZ(0);
+    white-space: normal;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Ajouter des délais pour chaque cercle */
-.main-presentation-circle::before {
-    animation-delay: 0s; /* Démarre immédiatement */
-}
-
-.second-presentation-circle::before {
-    animation-delay: 1s; /* Démarre après 1 seconde */
-}
-
-.third-presentation-circle::before {
-    animation-delay: 2s; /* Démarre après 2 secondes */
-}
-
-/* Animation de pulsation pour l'anneau */
-@keyframes pulsate-border {
-    0% {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 1;
-    }
-    70% {
-        transform: translate(-50%, -50%) scale(1.5);
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+.bubble-text-3 {
+    position: absolute;
+    width: 400px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px dotted #0095FF;
+    font-family: "Faculty Glyphic", sans-serif;
+    padding: 10px;
+    top: 100px;
+    left: 100%;
+    transform: translateY(-50%);
+    transform: translateZ(0);
+    white-space: normal;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
