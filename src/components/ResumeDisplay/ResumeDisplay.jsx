@@ -1,23 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
+import Modal from 'react-modal';
 import './resume-display.scss';
+
+Modal.setAppElement('#root'); // Pour l'accessibilité
 
 export default function ResumeDisplay() {
     const [isVisible, setIsVisible] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false); // État pour la modale
     const ref = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                } else {
-                    setIsVisible(false); // Facultatif : cache à nouveau si nécessaire
-                }
+                setIsVisible(entry.isIntersecting);
             },
             {
-                root: null, // Par défaut, observe le viewport
-                rootMargin: '0px', // Définissez un espace autour de la fenêtre d'observation
-                threshold: 0.2, // L'animation se déclenche lorsque 20% de l'élément est visible
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2,
             }
         );
     
@@ -31,14 +31,45 @@ export default function ResumeDisplay() {
             }
         };
     }, []);
-    
+
+    // Fonction pour ouvrir et fermer la modale
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     return (
         <div
             className={`resume-display ${isVisible ? 'animate' : ''}`}
             ref={ref}
         >
-            <img src="/src/assets/folder.png" alt="Resume" />
+            {isVisible && (
+                <div className="letter">
+                    <p>My Resume!</p>
+                    <p>Click Here</p>
+                    <img 
+                        src="/src/assets/folder.png" 
+                        alt="Resume" 
+                        onClick={openModal} // Ouvrir la modale au clic
+                    />
+                </div>
+            )}
+
+            {/* Modale pour afficher le PDF */}
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={closeModal}
+                contentLabel="Resume PDF"
+                className="pdf-modal"
+                overlayClassName="pdf-modal-overlay"
+            >
+                <button onClick={closeModal} className="close-button">Close</button>
+                <iframe 
+                    src="/public/CV_Maxime_Houguet.pdf" 
+                    width="100%" 
+                    height="100%" 
+                    title="CV Maxime HOUGUET"
+                    style={{ border: 'none' }}
+                />
+            </Modal>
         </div>
     );
 }

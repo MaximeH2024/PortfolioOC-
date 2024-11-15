@@ -6,12 +6,43 @@
     max-height: 768px;
     max-width: 1440px;
 }
+
 .presentation h2{
     border-bottom: 1px solid #0095FF;
     border-radius: 5px;
 }
 
+.presentation-intro {
+    font-family: "Faculty Glyphic", sans-serif;
+    height: 30px;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #0095FF;
+    animation: typing 5s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
 h2 {
     font-size: 36px;
     font-family: "Doto", sans-serif;
+}
+
+/* Animation pour le texte qui apparaît */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animation pour le clignotement du curseur */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #0095FF;
+    }
 }

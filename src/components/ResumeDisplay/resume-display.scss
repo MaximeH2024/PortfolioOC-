@@ -10,9 +10,20 @@
     }
 }
 
+@keyframes blinkBackground {
+    0%, 100% {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
 .resume-display {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     opacity: 0;
     transform: translateX(100%);
     transition: opacity 0.3s ease-out;
@@ -20,13 +31,95 @@
     &.animate {
         animation: slideInBounce 1s ease-out;
         opacity: 1;
-        transform: translateX(0); // Position finale
+        transform: translateX(0);
     }
 
-    img {
-        width: 200px;
-        height: 200px;
+    .letter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin: 26px auto 0;
+        max-width: 550px;
+        padding: 20px;
+        position: relative;
+        width: 80%;
+        min-height: 200px; /* Augmentez la hauteur pour faire de la place pour l'image */
+    }
+
+    .letter:before,
+    .letter:after {
+        content: "";
+        height: 98%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .letter:before {
+        background: #cecccc;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        left: -5px;
+        top: 4px;
+        transform: rotate(-2.7deg);
+    }
+
+    .letter:after {
+        background: #ece1e1;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        right: -3px;
+        top: 1px;
+        transform: rotate(1.4deg);
+    }
+
+    .letter img {
+        width: 100px;
+        height: 100px;
         object-fit: cover;
+        margin-top: 5px;
         border-radius: 8px;
     }
+
+    .letter p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+.pdf-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-modal {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff5e5e;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
 }

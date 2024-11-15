@@ -298,12 +298,14 @@
                 0 0 45px rgba(0, 149, 255, 0.2) inset;
 }
 
-.fixed-icon {
+.fixed-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    width: 80px;
+    height: 120px;
+    border-radius: 50%;
 }
 
 .last-circle {

@@ -6,6 +6,7 @@ import { faReact } from '@fortawesome/free-brands-svg-icons';
 export default function SkillsDisplay() {
     return (
         <div className="skills-display">
+            <h2>Compétences</h2>
             <div className="circle front-end">
                 <FontAwesomeIcon icon={faReact} />
                 <p>Front-End</p>

@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import PresentationBubble from '../PresentationBubble/PresentationBubble';
 import PresentationData from '../../data/presentation.json';
 import { useLanguage } from '../../context/LanguageContext';
+import headPicture from '../../assets/test.png';
 
 export default function PresentationEffect() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -34,7 +35,7 @@ export default function PresentationEffect() {
 
     return (
         <div className="presentation-effect">
-            <FontAwesomeIcon icon={faReact} className='fixed-icon' size='xl' />
+            <img src={headPicture} alt="Test" className='fixed-image' />
 
             <div
                 className="circle-container outer-circle-container"
