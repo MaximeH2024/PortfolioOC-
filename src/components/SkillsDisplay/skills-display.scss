@@ -1,0 +1,48 @@
+.skills-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+    .circle {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #f0f0f0; // Couleur de fond des cercles
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-size: 1.5rem;
+        color: #333;
+
+        p {
+            position: absolute;
+            bottom: -20px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #666;
+        }
+
+        &.front-end {
+            top: 10%;
+            left: 0%;
+            background-color: #61dafb; // Couleur associée à React
+        }
+
+        &.back-end {
+            bottom: 50%;
+            left: 50%;
+            background-color: #ff6f61; // Couleur pour le back-end
+        }
+
+        &.global {
+            bottom: 0;
+            right: 30%;
+            background-color: #6cc24a; // Couleur pour les compétences globales
+        }
+    }
+}

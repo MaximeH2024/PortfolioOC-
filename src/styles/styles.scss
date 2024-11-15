@@ -6,7 +6,7 @@ body {
     height: 100%;
     background: #00416A;
     background: -webkit-linear-gradient(#E4E5E6, #00416A);
-    background: linear-gradient(#E4E5E6, #00416A);
+    background: linear-gradient(to top,#E4E5E6, #00416A);
     color: #0095FF;
     font-family: "Roboto", serif;
     display: flex;
@@ -20,6 +20,10 @@ a {
     color: #0095FF;
 }
 .app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 1440px;
     width: 100%;
 }
@@ -28,6 +32,5 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 200px; // Assurez-vous que le conteneur a une hauteur visible
-    overflow: hidden;  // Évitez que l'enfant soit masqué
+    min-height: 200px;
 }

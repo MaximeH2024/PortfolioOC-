@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import { LanguageProvider } from './context/LanguageContext';
 import ProjectDisplay from './components/ProjectDisplay/ProjectDisplay';
 import ResumeDisplay from './components/ResumeDisplay/ResumeDisplay';
+import SkillsDisplay from './components/SkillsDisplay/SkillsDisplay';
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <div className="resume-container">
                     <ResumeDisplay />
                 </div>
+                <SkillsDisplay />
                 <ProjectDisplay />
                 <Footer />
             </div>

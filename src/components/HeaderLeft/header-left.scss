@@ -1,16 +1,17 @@
 .header-left {
-    background-color: #eeeeee;
+    background-color: transparent;
     width: 100%;
     max-width: 480px;
     padding: 10px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-left: 1px solid #0095FF;
-    border-top: 1px solid #0095FF;
-    border-bottom: 1px solid #0095FF;
+    justify-content: space-evenly;
     gap: 20px;
     font-family: "Faculty Glyphic", sans-serif;
 }
 
+.header-left a{
+    border-radius: 5px;
+    border-bottom: 1px solid #0095FF;
+}
