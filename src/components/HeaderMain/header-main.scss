@@ -1,0 +1,31 @@
+.header-main {
+    background-color: #eeeeee;
+    width: 100%;
+    max-width: 480px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0095FF;
+}
+
+.header-main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    gap: 5px;
+    text-align: center;
+}
+
+.header-main-flag {
+    display: flex;
+    gap: 5px;
+}
+
+.header-main-flag img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+

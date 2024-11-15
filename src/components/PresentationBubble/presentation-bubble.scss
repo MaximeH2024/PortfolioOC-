@@ -1,0 +1,86 @@
+.presentation-bubble {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.presentation-bubble:hover {
+    transform: scale(1.1);
+}
+
+.bubble-text {
+    position: absolute;
+    top: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 8px 12px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.presentation-bubble:hover .bubble-text {
+    opacity: 1;
+}
+
+.main-presentation-circle,
+.second-presentation-circle,
+.third-presentation-circle {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: currentColor;
+    box-shadow: 0 0 35px currentColor, 0 0 50px rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+/* Définition de la bordure pulsante avec des délais */
+.main-presentation-circle::before,
+.second-presentation-circle::before,
+.third-presentation-circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    border: 5px solid currentColor;
+    opacity: 1;
+    animation: pulsate-border 3s ease-out infinite;
+}
+
+/* Ajouter des délais pour chaque cercle */
+.main-presentation-circle::before {
+    animation-delay: 0s; /* Démarre immédiatement */
+}
+
+.second-presentation-circle::before {
+    animation-delay: 1s; /* Démarre après 1 seconde */
+}
+
+.third-presentation-circle::before {
+    animation-delay: 2s; /* Démarre après 2 secondes */
+}
+
+/* Animation de pulsation pour l'anneau */
+@keyframes pulsate-border {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
