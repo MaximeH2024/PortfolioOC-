@@ -45,6 +45,7 @@
         max-width: 550px;
         padding: 20px;
         position: relative;
+        gap: 5px;
         width: 80%;
         min-height: 200px; /* Augmentez la hauteur pour faire de la place pour l'image */
     }
@@ -123,4 +124,23 @@
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.arrow-icon {
+    position: absolute;
+    top:40%;
+    color: black;
+    animation: arrowGoingUpAndDown 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowGoingUpAndDown {
+    0% {
+        transform: translateY(0%) scale(1); /* Position initiale */
+    }
+    50% {
+        transform: translateY(10px) scale(1.1); /* Descend légèrement et grandit */
+    }
+    100% {
+        transform: translateY(0%) scale(1); /* Retour à la position initiale */
+    }
 }

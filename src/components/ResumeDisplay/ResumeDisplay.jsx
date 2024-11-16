@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Modal from 'react-modal';
 import './resume-display.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 Modal.setAppElement('#root'); // Pour l'accessibilité
 
@@ -45,10 +47,11 @@ export default function ResumeDisplay() {
                 <div className="letter">
                     <p>My Resume!</p>
                     <p>Click Here</p>
+                    <FontAwesomeIcon icon={faArrowDown} className='arrow-icon'/>
                     <img 
                         src="/src/assets/folder.png" 
                         alt="Resume" 
-                        onClick={openModal} // Ouvrir la modale au clic
+                        onClick={openModal}
                     />
                 </div>
             )}
