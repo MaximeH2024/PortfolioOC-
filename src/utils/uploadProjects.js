@@ -1,4 +1,3 @@
-// src/utils/uploadProjects.js
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { firebaseConfig } from "./firebaseConfig";

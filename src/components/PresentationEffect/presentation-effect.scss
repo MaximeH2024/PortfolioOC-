@@ -274,7 +274,7 @@
     height: 220px;
     border-color: rgba(231, 160, 53, 1);
     border-width: 2px;
-    animation: rotateBorderReverse 6s ease-in-out infinite;
+    animation: rotateBorderNormal 6s ease-in-out infinite;
     opacity: 1;
     mask: conic-gradient(
         from 0deg,
@@ -329,7 +329,7 @@
     height: 150px;
     border-color: rgba(0, 149, 255, 1);
     border-width: 1px;
-    animation: rotateBorderReverse 4s ease-in-out infinite;
+    animation: rotateBorderNormal 4s ease-in-out infinite reverse;
     opacity: 1;
     mask: conic-gradient(
         from 0deg,

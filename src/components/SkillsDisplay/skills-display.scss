@@ -1,48 +1,391 @@
 .skills-display {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 500px;
-    height: 500px;
+    max-width: 1024px;
+    margin: 20px;
+    height: 100%;
+    gap: 20px;
+}
 
-    .circle {
+.skills-display h2{
+    border-bottom: 1px solid #0095FF;
+    border-radius: 5px;
+}
+
+.first-part-skills-display {
+    display: flex;
+    max-width: 768px;
+    max-height: 250px;
+    justify-content: space-evenly;
+}
+
+.transition-effect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    color: black;
+
+    .sonar {
         position: absolute;
-        width: 200px;
-        height: 200px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
-        background-color: #f0f0f0; // Couleur de fond des cercles
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        font-size: 1.5rem;
-        color: #333;
+        background: rgba(0, 149, 255, 0.6);
+        animation: sonarPulse 4s infinite ease-out;
+        opacity: 0;
+    }
 
-        p {
-            position: absolute;
-            bottom: -20px;
-            font-size: 0.8rem;
-            text-align: center;
-            color: #666;
-        }
+    .sonar-front-end {
+        animation-delay: 2s;
+    }
 
-        &.front-end {
-            top: 10%;
-            left: 0%;
-            background-color: #61dafb; // Couleur associée à React
-        }
+    .sonar-back-end {
+        animation-delay: 3.5s;
+    }
 
-        &.back-end {
-            bottom: 50%;
-            left: 50%;
-            background-color: #ff6f61; // Couleur pour le back-end
-        }
+    .sonar-global {
+        animation-delay: 5s;
+    }
 
-        &.global {
-            bottom: 0;
-            right: 30%;
-            background-color: #6cc24a; // Couleur pour les compétences globales
+    @keyframes sonarPulse {
+        0% {
+            transform: scale(1);
+            opacity: 0.8;
         }
+        100% {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
+}
+
+.front-end img {
+    width: 50px;
+    height: 50px;
+}
+.circle-skills-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+
+    p {
+        position: absolute;
+        top: 20px;
+        font-size: 0.8rem;
+        text-align: center;
+        color: black;
+        font-family: "Faculty Glyphic", sans-serif;
+    }
+}
+
+.circle-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: yellow;
+}
+
+.rotating-border{
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 3px solid black;
+    mask: conic-gradient(
+            from 0deg,
+            black 0deg 60deg,
+            transparent 60deg 120deg,
+            black 120deg 180deg,
+            transparent 180deg 240deg,
+            black 240deg 300deg,
+            transparent 300deg 360deg
+        );
+    animation: rotateBorderNormal 8s linear infinite;
+}
+
+.rotating-border.secondary {
+    width: 98%;
+    height: 98%;
+    border-width: 2px;
+    animation: rotateBorderNormal 8s linear infinite reverse;
+    mask: conic-gradient(
+        from 0deg,
+        black 0deg 30deg,
+        transparent 30deg 150deg,
+        black 150deg 180deg,
+        transparent 180deg 205deg,
+        black 205deg 310deg,
+        transparent 310deg 360deg
+    );
+}
+
+.circle-skills-container.front-end .rotating-border {
+    border-color: rgb(0, 81, 232, 0.5);
+    mask: conic-gradient(
+        from 0deg,
+        #00A8E8 0deg 60deg,
+        transparent 60deg 120deg,
+        #00A8E8 120deg 180deg,
+        transparent 180deg 240deg,
+        #00A8E8 240deg 300deg,
+        transparent 300deg 360deg
+    );
+}
+
+.circle-skills-container.front-end .rotating-border.secondary {
+    border-color: rgb(0, 81, 232);
+    mask: conic-gradient(
+        from 0deg,
+        #00A8E8 0deg 30deg,
+        transparent 30deg 150deg,
+        #00A8E8 150deg 180deg,
+        transparent 180deg 205deg,
+        #00A8E8 205deg 310deg,
+        transparent 310deg 360deg
+    );
+}
+
+/* Back-End Rotating Border */
+.circle-skills-container.back-end .rotating-border {
+    border-color: rgb(44, 102, 45, 0.5); /* Vert foncé */
+    mask: conic-gradient(
+        from 0deg,
+        #2C662D 0deg 60deg,
+        transparent 60deg 120deg,
+        #2C662D 120deg 180deg,
+        transparent 180deg 240deg,
+        #2C662D 240deg 300deg,
+        transparent 300deg 360deg
+    );
+}
+
+.circle-skills-container.back-end .rotating-border.secondary {
+    border-color: rgb(44, 102, 45);
+    mask: conic-gradient(
+        from 0deg,
+        #2C662D 0deg 30deg,
+        transparent 30deg 150deg,
+        #2C662D 150deg 180deg,
+        transparent 180deg 205deg,
+        #2C662D 205deg 310deg,
+        transparent 310deg 360deg
+    );
+}
+
+/* Global Web Rotating Border */
+.circle-skills-container.global .rotating-border {
+    border-color: rgb(209, 92, 2, 0.5);
+    mask: conic-gradient(
+        from 0deg,
+        #FF6F00 0deg 60deg,
+        transparent 60deg 120deg,
+        #FF6F00 120deg 180deg,
+        transparent 180deg 240deg,
+        #FF6F00 240deg 300deg,
+        transparent 300deg 360deg
+    );
+}
+
+.circle-skills-container.global .rotating-border.secondary {
+    border-color: rgb(209, 92, 2);
+    mask: conic-gradient(
+        from 0deg,
+        #FF6F00 0deg 30deg,
+        transparent 30deg 150deg,
+        #FF6F00 150deg 180deg,
+        transparent 180deg 205deg,
+        #FF6F00 205deg 310deg,
+        transparent 310deg 360deg
+    );
+}
+
+.front-end{
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, #00A8E8 100%);
+}
+
+.back-end{
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, #2C662D 100%);
+}
+
+.global {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, #FF6F00 100%);
+}
+
+.circle-icons-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-icons-container .icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    color: black;
+    border: 1px solid rgb(255, 255, 0);
+    padding: 7px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgb(255, 255, 0) inset;
+}
+
+.icon-html {
+    
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-css {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.icon-js {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-react {
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.icon-nodejs {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-express {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.icon-mongodb {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-crud {
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.icon-seo {
+    position: absolute;
+    top: 0; /* Icône au sommet */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-accessibility {
+    position: absolute;
+    bottom: 15%; /* Ajuste l'alignement vertical */
+    left: 15%; /* Ajuste l'alignement horizontal */
+    transform: translate(-50%, 50%);
+}
+
+.icon-agile {
+    position: absolute;
+    bottom: 15%; /* Ajuste l'alignement vertical */
+    right: 15%; /* Ajuste l'alignement horizontal */
+    transform: translate(50%, 50%);
+}
+
+@keyframes rotateBorderNormal {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-content::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #0095FF;
+    box-shadow: 0 0 10px rgba(0, 149, 255, 0.6), 0 0 20px rgba(0, 149, 255, 0.6);
+    filter: blur(1px);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.circle-skills-container.front-end .circle-content::after {
+    
+    animation: moveFromRightToCenter 3s ease-in-out infinite;
+}
+
+.circle-skills-container.back-end .circle-content::after {
+    animation: moveFromLeftToCenter 3s ease-in-out infinite;
+}
+
+.circle-skills-container.global .circle-content::after {
+    animation: moveFromBottomToCenter 3s ease-in-out infinite;
+}
+
+@keyframes moveFromRightToCenter {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(210px, 0px);
+        opacity: 0;
+    }
+}
+
+@keyframes moveFromLeftToCenter {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-210px, 0px);
+        opacity: 0;
+    }
+}
+
+@keyframes moveFromBottomToCenter {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0px, -210px);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .circle-skills-container .circle-content::after {
+        transform: translate(50px, -50px);
     }
 }

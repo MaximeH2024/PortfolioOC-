@@ -1,7 +1,5 @@
 // PresentationEffect.jsx
 import './presentation-effect.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect } from 'react';
 import PresentationBubble from '../PresentationBubble/PresentationBubble';
 import PresentationData from '../../data/presentation.json';
@@ -40,7 +38,7 @@ export default function PresentationEffect() {
             <div
                 className="circle-container outer-circle-container"
                 style={{
-                    transform: `translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px) translateZ(300px)`
+                    transform: `translate(${mousePosition.x * 0.005}px, ${mousePosition.y * 0.005}px) translateZ(400px)`
                 }}
             >
                 <div className="circle outer-circle"></div>
@@ -49,7 +47,7 @@ export default function PresentationEffect() {
             <div
                 className="circle-container main-circle-container"
                 style={{
-                    transform: `translate(${mousePosition.x * 0.09}px, ${mousePosition.y * 0.09}px) translateZ(150px)`
+                    transform: `translate(${mousePosition.x * 0.09}px, ${mousePosition.y * 0.09}px) translateZ(250px)`
                 }}
             >
                 <div className="main-presentation-circle" style={{ color: "#CC4E4E" }}>

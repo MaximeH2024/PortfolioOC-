@@ -11,7 +11,30 @@
     font-family: "Faculty Glyphic", sans-serif;
 }
 
-.header-left a{
+.header-left a {
+    position: relative; 
     border-radius: 5px;
     border-bottom: 1px solid #0095FF;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.header-left a::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0095FF, #00D4FF);
+    z-index: -1; 
+    transition: top 0.4s ease; /* Animation de la montée */
+}
+
+.header-left a:hover::after {
+    top: 0;
+}
+
+.header-left a:hover {
+    color: black;
 }

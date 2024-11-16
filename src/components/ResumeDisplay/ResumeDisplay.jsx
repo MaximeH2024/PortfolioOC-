@@ -63,7 +63,7 @@ export default function ResumeDisplay() {
             >
                 <button onClick={closeModal} className="close-button">Close</button>
                 <iframe 
-                    src="/public/CV_Maxime_Houguet.pdf" 
+                    src="/CV_Maxime_Houguet.pdf" 
                     width="100%" 
                     height="100%" 
                     title="CV Maxime HOUGUET"
