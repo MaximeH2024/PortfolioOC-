@@ -1,0 +1,170 @@
+{
+    "frontEnd": {
+      "title": {
+        "fr": "Front-End",
+        "en": "Front-End"
+      },
+      "skills": {
+        "HTML": {
+          "name": {
+            "fr": "HTML",
+            "en": "HTML"
+          },
+          "description": {
+            "fr": "Création d'interfaces responsives conformes aux maquettes, optimisation de la structure.",
+            "en": "Creation of responsive interfaces matching designs, optimization of structure."
+          }
+        },
+        "CSS": {
+          "name": {
+            "fr": "CSS",
+            "en": "CSS"
+          },
+          "description": {
+            "fr": "Mise en place de styles avancés et gestion des animations pour améliorer l'expérience utilisateur.",
+            "en": "Implementation of advanced styles and management of animations to enhance user experience."
+          }
+        },
+        "JavaScript": {
+          "name": {
+            "fr": "JavaScript",
+            "en": "JavaScript"
+          },
+          "description": {
+            "fr": "Gestion des interactions utilisateur, manipulation dynamique du DOM, communication avec des API.",
+            "en": "Handling user interactions, dynamic DOM manipulation, communication with APIs."
+          }
+        },
+        "React": {
+          "name": {
+            "fr": "React",
+            "en": "React"
+          },
+          "description": {
+            "fr": "Développement de composants réutilisables, routage avec React Router.",
+            "en": "Development of reusable components, routing with React Router."
+          }
+        }
+      },
+      "projects": {
+        "fr": [
+          "Intégration de maquettes pour des pages web (HTML/CSS).",
+          "Création d'une application web de réservation de logements avec React."
+        ],
+        "en": [
+          "Integration of designs into web pages (HTML/CSS).",
+          "Creation of a housing reservation web application using React."
+        ]
+      },
+      "color": "#00A8E8"
+    },
+    "backEnd": {
+      "title": {
+        "fr": "Back-End",
+        "en": "Back-End"
+      },
+      "skills": {
+        "Node.js": {
+          "name": {
+            "fr": "Node.js",
+            "en": "Node.js"
+          },
+          "description": {
+            "fr": "Développement de serveurs backend performants.",
+            "en": "Development of high-performance backend servers."
+          }
+        },
+        "Express": {
+          "name": {
+            "fr": "Express",
+            "en": "Express"
+          },
+          "description": {
+            "fr": "Gestion des routes et middleware pour des applications web.",
+            "en": "Management of routes and middleware for web applications."
+          }
+        },
+        "MongoDB": {
+          "name": {
+            "fr": "MongoDB",
+            "en": "MongoDB"
+          },
+          "description": {
+            "fr": "Création et manipulation de bases de données non relationnelles.",
+            "en": "Creation and manipulation of non-relational databases."
+          }
+        },
+        "CRUD": {
+          "name": {
+            "fr": "CRUD",
+            "en": "CRUD"
+          },
+          "description": {
+            "fr": "Implémentation sécurisée d'opérations Create, Read, Update, Delete.",
+            "en": "Secure implementation of Create, Read, Update, Delete operations."
+          }
+        },
+        "API REST": {
+          "name": {
+            "fr": "API REST",
+            "en": "API REST"
+          },
+          "description": {
+            "fr": "Création et consommation d'API pour connecter front-end et back-end.",
+            "en": "Creation and consumption of APIs to connect front-end and back-end."
+          }
+        }
+      },
+      "projects": {
+        "fr": [
+          "Développement du backend pour un site de notation de livres.",
+          "Création de bases de données et opérations sécurisées pour des projets complets."
+        ],
+        "en": [
+          "Development of the backend for a book rating site.",
+          "Creation of databases and secure operations for complete projects."
+        ]
+      },
+      "color": "#2C662D"
+    },
+    "globalWeb": {
+      "title": {
+        "fr": "Web Global",
+        "en": "Global Web"
+      },
+      "skills": {
+        "SEO": {
+          "name": {
+            "fr": "SEO",
+            "en": "SEO"
+          },
+          "description": {
+            "fr": "Optimisation des performances techniques et des contenus pour améliorer la visibilité sur les moteurs de recherche.",
+            "en": "Optimization of technical performance and content to enhance visibility on search engines."
+          }
+        },
+        "Git": {
+          "name": {
+            "fr": "Git",
+            "en": "Git"
+          },
+          "description": {
+            "fr": "Versionnement et gestion collaborative des projets.",
+            "en": "Version control and collaborative project management."
+          }
+        }
+      },
+      "projects": {
+        "fr": [
+          "Optimisation d'un site existant pour les performances et l'accessibilité.",
+          "Création de documents techniques pour planifier et gérer des projets web."
+        ],
+        "en": [
+          "Optimization of an existing site for performance and accessibility.",
+          "Creation of technical documents to plan and manage web projects."
+        ]
+      },
+      "color": "#FF6F00"
+    }
+  }
+  

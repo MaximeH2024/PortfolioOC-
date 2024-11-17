@@ -1,0 +1,84 @@
+.skills-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    position: relative;
+    margin: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toggle-box {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    animation: blink 1.5s ease-in infinite;
+}
+
+.toggle-box:hover {
+    transform: scale(1.1);
+}
+
+.skills-details {
+    overflow: hidden;
+    color: black;
+    border: 3px solid;
+    padding: 10px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 1.5s ease, opacity 1.5s ease, visibility 1.5s ease;
+}
+
+.skills-details.open {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.skills-details.closed {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.skills-details h4 {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    border-radius: 25%;
+}
+
+.skills-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-details ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
