@@ -1,13 +1,25 @@
+import { useState, useEffect } from 'react';
 import './presentation-text-display.scss';
 import PropTypes from 'prop-types';
 
 export default function PresentationTextDisplay({ text, color }) {
+    const [showText, setShowText] = useState(false);
+    
+    useEffect(() => {
+        if (text) {
+            const timeout = setTimeout(() => setShowText(true), 1000);
+            return () => clearTimeout(timeout);
+        } else {
+            setShowText(false);
+        }
+    }, [text]);
+
     return (
         <div
             className={`presentation-text-display ${text ? 'expanded' : ''}`}
             style={{ backgroundColor: color }}
         >
-            {text && <p>{text}</p>}
+            {showText && <p>{text}</p>}
         </div>
     );
 }

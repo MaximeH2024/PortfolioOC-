@@ -5,6 +5,7 @@
     align-items: center;
     height: 100%;
     max-width: 1440px;
+    gap: 5px;
 }
 
 .presentation h2{
@@ -43,22 +44,62 @@ h2 {
     justify-content: space-evenly;
 }
 
-/* 
-Animation pour le texte qui apparaît
-@keyframes typing {
-    from {
-        width: 0;
+.presentation-indication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 12px;
+    gap: 15px;
+}
+
+.presentation-indication-1,
+.presentation-indication-2,
+.presentation-indication-3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+}
+
+.presentation-indication-1::before,
+.presentation-indication-2::before,
+.presentation-indication-3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent; /* Ajoutez une bordure transparente */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    animation: pulsate-border 2s ease-out infinite;
+    z-index: -1; /* Place l'effet derrière le cercle */
+}
+
+.presentation-indication-1::before {
+    border-color: #CC4E4E; /* Couleur correspondant à presentation-indication-1 */
+}
+
+.presentation-indication-2::before {
+    border-color: #2ECC71; /* Couleur correspondant à presentation-indication-2 */
+}
+
+.presentation-indication-3::before {
+    border-color: #4A6EF5; /* Couleur correspondant à presentation-indication-3 */
+}
+
+@keyframes pulsate-border {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
     }
-    to {
-        width: 100%;
+    70% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
-Animation pour le clignotement du curseur 
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #0095FF;
-    }
-}*/
