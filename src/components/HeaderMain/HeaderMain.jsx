@@ -17,7 +17,7 @@ export default function HeaderMain({ isMobile }) {
             )}
             
             <div className='header-main-title'>
-                <h1>{translations[language].title}</h1>
+                <h1><strong>{translations[language].title}</strong></h1>
                 <div className='header-main-flag'>
                     <img
                         src='../src/assets/french_flag.png'

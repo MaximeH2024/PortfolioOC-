@@ -1,12 +1,20 @@
 import './presentation.scss';
 import PresentationEffect from '../PresentationEffect/PresentationEffect';
+import { useLanguage } from '../../context/LanguageContext';
 
 export default function Presentation() {
+    const { language, translations } = useLanguage();
+
     return (
         <div className="presentation">
-            <h2>Presentation</h2>
-            <div className='presentation-intro'>Je me présente <strong>Houguet Maxime</strong>, 34 ans, développeur <strong>enthousiaste</strong> en quête de nouveaux défis, je vous invite à en apprendre plus sur moi en parcourant mon <strong>portfolio</strong></div>
-            <PresentationEffect />
+            <h2>{translations[language].presentationTitle}</h2>
+            <div
+                className="presentation-intro"
+                dangerouslySetInnerHTML={{ __html: translations[language].presentationText }}
+            />
+            <div className='main-part-presentation'>
+                <PresentationEffect />
+            </div>
         </div>
     );
 }

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-height: 768px;
+    height: 100%;
     max-width: 1440px;
 }
 
@@ -13,13 +13,23 @@
 }
 
 .presentation-intro {
-    font-family: "Faculty Glyphic", sans-serif;
-    height: 30px;
-    font-size: 18px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #0095FF;
-    animation: typing 5s steps(40, end), blink-caret 0.5s step-end infinite;
+    font-family: "Sour Gummy", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5; 
+    text-align: center;
+    max-width: 768px;
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.8rem; 
+    }
 }
 
 h2 {
@@ -27,7 +37,14 @@ h2 {
     font-family: "Doto", sans-serif;
 }
 
-/* Animation pour le texte qui apparaît */
+.main-part-presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* 
+Animation pour le texte qui apparaît
 @keyframes typing {
     from {
         width: 0;
@@ -36,8 +53,7 @@ h2 {
         width: 100%;
     }
 }
-
-/* Animation pour le clignotement du curseur */
+Animation pour le clignotement du curseur 
 @keyframes blink-caret {
     from, to {
         border-color: transparent;
@@ -45,4 +61,4 @@ h2 {
     50% {
         border-color: #0095FF;
     }
-}
+}*/
