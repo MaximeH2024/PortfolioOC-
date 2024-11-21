@@ -62,6 +62,8 @@ h2 {
     position: relative; /* Nécessaire pour positionner le pseudo-élément */
 }
 
+
+
 .presentation-indication-1::before,
 .presentation-indication-2::before,
 .presentation-indication-3::before {
@@ -74,20 +76,23 @@ h2 {
     border: 2px solid transparent; /* Ajoutez une bordure transparente */
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0.5);
-    animation: pulsate-border 2s ease-out infinite;
+    animation: pulsate-border 3s ease-out infinite;
     z-index: -1; /* Place l'effet derrière le cercle */
 }
 
 .presentation-indication-1::before {
-    border-color: #CC4E4E; /* Couleur correspondant à presentation-indication-1 */
+    border-color: #CC4E4E;
+    animation-delay: 0s;
 }
 
 .presentation-indication-2::before {
-    border-color: #2ECC71; /* Couleur correspondant à presentation-indication-2 */
+    border-color: #2ECC71; 
+    animation-delay: 1s;
 }
 
 .presentation-indication-3::before {
-    border-color: #4A6EF5; /* Couleur correspondant à presentation-indication-3 */
+    border-color: #4A6EF5; 
+    animation-delay: 2s;
 }
 
 @keyframes pulsate-border {
