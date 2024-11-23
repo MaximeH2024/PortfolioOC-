@@ -6,10 +6,9 @@
     padding: 20px;
     margin: 20px auto;
     max-width: 768px;
-    background-color: white;
+    background-color: rgb(255, 255, 255,0.8);
     border-radius: 25px;
-    border-top: 2px solid #0095FF;
-    border-bottom: 2px solid #0095FF;
+    border: thick double rgb(0, 52, 163, 0.6);
   
     &__title {
         font-family: "Doto", sans-serif;

@@ -11,21 +11,18 @@ import FormationDisplay from './components/FormationDisplay/FormationDisplay';
 function App() {
     return (
         <LanguageProvider>
-            <div className='app'>
+            <div className="app">
                 <Header />
-                <div className='grid-background'>
+                <div className="grid-background">
                     <Presentation />
-                    
-                        <div className="resume-container">
-                            <ResumeDisplay />
-                        </div>
-        
+                    <div className="resume-container">
+                        <ResumeDisplay />
+                    </div>
                     <SkillsDisplay />
                 </div>
-                <div className='img-background'>
-                <FormationDisplay />
-                
-                <ProjectDisplay />
+                <div className="img-background">
+                    <FormationDisplay />
+                    <ProjectDisplay />
                 </div>
                 <Footer />
             </div>
