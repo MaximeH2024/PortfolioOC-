@@ -27,7 +27,7 @@
     color: rgb(0, 52, 163);
   
     h3 {
-      font-size: 1.4em;
+      font-size: 1.3em;
       font-weight: bold;
       font-family: "Doto", sans-serif;
       text-align: center;
@@ -39,7 +39,7 @@
   
     p {
       font-family: "Sour Gummy", sans-serif;
-      font-size: 0.9em;
+      font-size: 0.8em;
       margin-bottom: 15px;
       padding: 5px;
       border-right: thick double rgb(0, 52, 163, 0.6);
@@ -54,6 +54,7 @@
         font-weight: bold;
         text-align: center;
         border: thick double rgb(0, 52, 163, 0.6);
+        font-family: "Sour Gummy", sans-serif;
         border-radius: 10px;
         font-size: 1em;
         margin-top: 10px;
@@ -62,11 +63,12 @@
       }
     
       .collapsible-label:hover {
-        color: #0095FF; /* Changement de couleur au survol */
+        color: #0095FF;
       }
     
       .collapsible-content {
         overflow: hidden;
+        font-family: "Sour Gummy", sans-serif;
         max-height: 0;
         transition: max-height 0.5s ease, opacity 0.5s ease;
         opacity: 0;
@@ -75,8 +77,9 @@
       }
     
       .collapsible-content.expanded {
-        max-height: 500px; /* Ajuster en fonction de la taille du contenu */
+        max-height: 500px;
         opacity: 1;
+        font-family: "Sour Gummy", sans-serif;
       }
     
       .collapsible-content.collapsed {
