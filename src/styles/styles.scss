@@ -67,3 +67,58 @@ a {
         linear-gradient(to right, transparent 20px, black 40px);
     mask-composite: intersect;
 }
+
+.img-background {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 1440px;
+    width: calc(100% - 20px);
+    height: 100%;
+    z-index: 0;
+    background: transparent;
+}
+
+.img-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(0, 52, 163, 0.8);
+    box-shadow: 0 0 10px 5px rgb(0, 52, 163, 0.6);
+    z-index: 2;
+    pointer-events: none;
+    animation: light-point 20s ease-in-out infinite;
+}
+
+@keyframes light-point {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 10px);
+    }
+    50% {
+        top: calc(100% - 10px);
+        left: calc(100% - 10px);
+    }
+    75% {
+        top: calc(100% - 10px);
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+
+

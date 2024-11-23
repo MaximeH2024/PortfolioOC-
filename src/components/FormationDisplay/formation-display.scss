@@ -5,24 +5,33 @@
     align-items: center;
     padding: 20px;
     margin: 20px auto;
-    max-width: 1440px;
-    background-color: transparent;
-    border-top: 1px solid #0095FF; 
-    border-bottom: 1px solid #0095FF; 
-    border-radius: 8px;
+    max-width: 768px;
+    background-color: white;
+    border-radius: 25px;
+    border-top: 2px solid #0095FF;
+    border-bottom: 2px solid #0095FF;
   
     &__title {
         font-family: "Doto", sans-serif;
         font-size: 1.5em;
         margin-bottom: 10px;
-        color: #333;
-    }
+        color: rgb(0, 52, 163);
+        text-align: center;
+        border-bottom: 1px solid #0095FF;
+        background: linear-gradient(0deg, rgb(0, 52, 163), #0095FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 8px rgb(0, 52, 163), 0 0 15px #0095FF;
+        }
   
     &__text {
-        font-family: "Faculty Glyphic", sans-serif;
+        font-family: "Sour Gummy", sans-serif;
         font-size: 1em;
         line-height: 1.6;
-        color: #555;
-    }
+        color: rgb(0, 52, 163);
+        text-align: justify;
+        word-wrap: break-word;
+        width: 100%;
+        }
   }
   
