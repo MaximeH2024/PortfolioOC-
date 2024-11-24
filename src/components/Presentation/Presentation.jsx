@@ -13,7 +13,7 @@ export default function Presentation() {
                 dangerouslySetInnerHTML={{ __html: translations[language].presentationText }}
             />
             <div className='presentation-indication'>
-                <p>Vous pouvez survolez les ronds pour en apprendre plus</p>
+                <p>{translations[language].hoverInstruction}</p>
                 <span className='presentation-indication-1'> </span>
                 <span className='presentation-indication-2'> </span>
                 <span className='presentation-indication-3'> </span>

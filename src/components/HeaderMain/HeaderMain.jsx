@@ -21,10 +21,16 @@ export default function HeaderMain({ isMobile }) {
             <div className='header-main-title'>
                 <h1><strong>{translations[language].title}</strong></h1>
                 <div className='header-main-icon'>
-                    <div className='header-main-link'>
-                        <FontAwesomeIcon icon={faGithub} size='2x' />
-                        <FontAwesomeIcon icon={faLinkedin} size='2x' />
-                        <FontAwesomeIcon icon={faEnvelope} size='2x' />
+                <div className='header-main-link'>
+                        <a href="https://github.com/MaximeH2024" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faGithub} size='2x' />
+                        </a>
+                        <a href="https://www.linkedin.com/in/maxime-houguet-dev" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} size='2x' />
+                        </a>
+                        <a href="mailto:houguetm.pro@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faEnvelope} size='2x' />
+                        </a>
                     </div>
                     <img
                         src='../src/assets/french_flag.png'

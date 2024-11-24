@@ -17,7 +17,6 @@ export default function Header() {
 
     return (
         <div className="header">
-            {/* Afficher HeaderLeft et HeaderRight soit dans Header soit dans HeaderMain */}
             {!isMobile && <HeaderLeft />}
             <HeaderMain isMobile={isMobile} />
             {!isMobile && <HeaderRight />}

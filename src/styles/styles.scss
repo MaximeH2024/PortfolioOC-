@@ -81,7 +81,7 @@ a {
     height: 100%;
     z-index: 0;
     background: url('../assets/rb_59421.png');
-    background-size: cover;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     mask-image: 
         linear-gradient(to bottom, transparent 5px, black 20px),
@@ -129,5 +129,14 @@ a {
     }
 }
 
+@media (max-width: 1440px) and (min-width: 1025px) {
 
+}
 
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+} 
+
+@media (max-width: 768px) and (min-width: 320px) {
+
+}

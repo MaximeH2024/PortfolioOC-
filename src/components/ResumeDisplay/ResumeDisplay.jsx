@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import './resume-display.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { useLanguage } from '../../context/LanguageContext';
 
 Modal.setAppElement('#root'); // Pour l'accessibilité
 
@@ -10,6 +11,7 @@ export default function ResumeDisplay() {
     const [isVisible, setIsVisible] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false); // État pour la modale
     const ref = useRef(null);
+    const { language, translations } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -22,11 +24,11 @@ export default function ResumeDisplay() {
                 threshold: 0.2,
             }
         );
-    
+
         if (ref.current) {
             observer.observe(ref.current);
         }
-    
+
         return () => {
             if (ref.current) {
                 observer.unobserve(ref.current);
@@ -45,8 +47,8 @@ export default function ResumeDisplay() {
         >
             {isVisible && (
                 <div className="letter">
-                    <p>My Resume!</p>
-                    <p>Click Here</p>
+                    <p>{translations[language].resumeTitle}</p>
+                    <p>{translations[language].resumeCTA}</p>
                     <FontAwesomeIcon icon={faArrowDown} className='arrow-icon'/>
                     <img 
                         src="/src/assets/folder.png" 

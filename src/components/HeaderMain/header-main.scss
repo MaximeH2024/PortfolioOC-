@@ -40,3 +40,12 @@
     border-right: 2px dotted white;
     padding-right: 15px;
 }
+
+.header-main-link a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.header-main-link a:hover {
+    color: #0095FF;
+}

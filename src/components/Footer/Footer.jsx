@@ -17,9 +17,9 @@ export default function Footer() {
                     // Ajouter une classe spécifique aux images
                     const modifiedContent = `
                         <div class="footer-header-content">
-                            <div>${headerLeft}</div>
+                            <div class="footer-left-icon">${headerLeft}</div>
                             <div class="footer-icons">${headerMainIcons}</div>
-                            <div>${headerRight}</div>
+                            <div class="footer-right-icon">${headerRight}</div>
                         </div>
                     `;
 
