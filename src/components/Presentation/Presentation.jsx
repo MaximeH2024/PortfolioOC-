@@ -1,6 +1,7 @@
 import './presentation.scss';
 import PresentationEffect from '../PresentationEffect/PresentationEffect';
 import { useLanguage } from '../../context/LanguageContext';
+import PresentationTextDisplayMobile from '../PresentationTextDisplayMobile/PresentationTextDisplayMobile';
 
 export default function Presentation() {
     const { language, translations } = useLanguage();
@@ -20,6 +21,9 @@ export default function Presentation() {
             </div>
             <div className='main-part-presentation'>
                 <PresentationEffect />
+            </div>
+            <div className='main-part-mobile'>
+                <PresentationTextDisplayMobile />
             </div>
         </div>
     );

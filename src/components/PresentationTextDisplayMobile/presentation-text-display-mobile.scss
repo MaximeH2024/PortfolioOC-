@@ -1,0 +1,22 @@
+.presentation-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 100%;
+    box-sizing: border-box; /* Inclut les bordures et les padding dans la largeur */
+}
+
+.presentation-item {
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    word-wrap: break-word;
+}
+
+

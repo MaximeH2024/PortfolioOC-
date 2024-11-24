@@ -3,47 +3,55 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40px;
     background-color: #1a1a1a; /* Couleur de fond */
     color: #fff;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: space-between; /* Répartition équilibrée des éléments */
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px; /* Ajoute de l'espace pour respirer */
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    
+    gap: 10px; /* Ajoute un espacement entre les éléments */
+    text-align: center; /* Centre le texte si les éléments passent à la ligne */
+}
 
-    .footer-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        
-    }
+.footer-title {
+    font-size: 1rem; /* Ajuste la taille du texte pour éviter qu'il ne déborde */
+    font-weight: bold;
+    flex: 1 1 auto; /* Permet au titre de s'adapter à l'espace disponible */
+    text-align: center; /* Centre le texte */
+}
 
-    .footer-dynamic-content {
-        display: flex;
-        gap: 20px;
-        align-items: center;
+.footer-dynamic-content {
+    display: flex;
+    flex-wrap: wrap; /* Autorise les éléments à passer à la ligne */
+    gap: 15px; /* Espace entre les icônes et le texte */
+    justify-content: center; /* Centre le contenu dans la zone disponible */
+    align-items: center;
+    flex: 2 1 auto; /* Prend plus de place que le titre si nécessaire */
+}
 
-        .footer-header-content {
-            display: flex;
-            gap: 20px;
-            
+.footer-header-content {
+    display: flex;
+    flex-wrap: wrap; /* Les icônes passent à la ligne si besoin */
+    gap: 15px; /* Espacement entre les groupes d'icônes */
+    justify-content: center; /* Centre le contenu dans l'espace disponible */
+    align-items: center;
+}
 
-            div {
-                display: flex;
-                gap: 10px;
-                align-items: center;
-            }
-        }
-
-        .footer-left-icon{
-            border-right: 2px dotted white;
-            padding-right: 15px;
-        }
-
-        img {
-            display: none;
-        }
-    }
+.footer-left-icon {
+    border-right: 2px dotted white; /* Bordure visuelle pour séparer */
+    padding-right: 15px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Les éléments à l'intérieur passent à la ligne */
+}
+.footer-right-icon {
+    gap: 5px;
+    display: flex;
+}
+.footer-header-content img {
+    display: none;
 }

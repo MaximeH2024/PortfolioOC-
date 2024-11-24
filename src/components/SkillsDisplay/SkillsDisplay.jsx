@@ -22,7 +22,8 @@ export default function SkillsDisplay() {
 
     return (
         <div className="skills-display-container">
-                <div className="display-container-left">
+            
+            <div className="display-container-left">
                     <SkillsDetails
                         title={skillsData.frontEnd.title[language]}
                         skills={transformSkills(skillsData.frontEnd.skills)}
@@ -33,7 +34,6 @@ export default function SkillsDisplay() {
                 <h2>{language === 'fr' ? 'Compétences' : 'Skills'}</h2>
                 <div className="skills-display-main">
                     <div className="first-part-skills-display">
-                        {/* Front-End */}
                         <div className="circle-skills-container front-end">
                             <div className="rotating-border"></div>
                             <div className="rotating-border secondary"></div>

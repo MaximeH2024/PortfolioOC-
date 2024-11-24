@@ -414,8 +414,24 @@
     }
 }
 
-@media (max-width: 768px) {
-    .circle-skills-container .circle-content::after {
-        transform: translate(50px, -50px);
+@media (max-width: 1024px) {
+    .skills-display-container{
+        display: flex;
     }
+    .skills-display{
+        display: none;
+    }
+    .skills-display-main {
+        display: none;
+    }
+    .display-container-right{
+        flex-direction: row;
+    }
+} 
+
+@media (max-width: 768px) {
+    .skills-display-container {
+       flex-direction: column;
+    }
+    
 }

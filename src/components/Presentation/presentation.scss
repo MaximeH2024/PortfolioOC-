@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    max-width: 1440px;
+    max-width: 100%;
     gap: 5px;
 }
 
@@ -18,8 +18,7 @@
     font-size: 1rem;
     line-height: 1.5; 
     text-align: center;
-    max-width: 768px;
-    width: 100%;
+    max-width: 100%;
     word-wrap: break-word;
     word-break: break-word;
     margin: 0 auto;
@@ -44,6 +43,9 @@ h2 {
     justify-content: space-evenly;
 }
 
+.main-part-mobile {
+    display: none;
+}
 .presentation-indication {
     display: flex;
     justify-content: center;
@@ -108,3 +110,17 @@ h2 {
         opacity: 0;
     }
 }
+
+@media (max-width: 1024px) {
+    .main-part-presentation {
+        display: none;
+    }
+
+    .presentation-indication {
+        display: none;
+    }
+    .main-part-mobile {
+        display: flex;
+        max-width: 100%;
+    }
+} 
