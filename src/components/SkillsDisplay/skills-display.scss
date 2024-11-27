@@ -13,8 +13,6 @@
     justify-content: center;
     align-items: center;
     max-width: 1024px;
-    margin: 20px;
-    
     gap: 20px;
 }
 
@@ -417,6 +415,7 @@
 @media (max-width: 1024px) {
     .skills-display-container{
         display: flex;
+        flex-direction: column;
     }
     .skills-display{
         display: none;
@@ -425,7 +424,7 @@
         display: none;
     }
     .display-container-right{
-        flex-direction: row;
+        flex-direction: column;
     }
 } 
 

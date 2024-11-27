@@ -11,9 +11,9 @@ export default function HeaderLeft() {
 
     return (
         <div className="header-left">
-            <a href='#'>{translations[language].presentation}</a>
-            <a href='#'>{translations[language].cv}</a>
-            <a href='#'>{translations[language].skills}</a>
+            <a href="#presentation">{translations[language].presentation}</a>
+            <a href="#resume">{translations[language].cv}</a>
+            <a href="#skills">{translations[language].skills}</a>
         </div>
     );
 }

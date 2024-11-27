@@ -1,34 +1,19 @@
 import { useState, useEffect } from 'react';
+import HeaderLeft from '../HeaderLeft/HeaderLeft';
+import HeaderRight from '../HeaderRight/HeaderRight';
 import './footer.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
-    const [headerContent, setHeaderContent] = useState(null);
+    const [showHeaderContent, setShowHeaderContent] = useState(false);
 
     useEffect(() => {
         const header = document.querySelector('.header');
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (!entry.isIntersecting) {
-                    // Récupérer et redimensionner les éléments de l'en-tête
-                    const headerLeft = document.querySelector('.header-left')?.innerHTML || '';
-                    const headerRight = document.querySelector('.header-right')?.innerHTML || '';
-                    const headerMainIcons = document.querySelector('.header-main-icon')?.innerHTML || '';
-
-                    // Ajouter une classe spécifique aux images
-                    const modifiedContent = `
-                        <div class="footer-header-content">
-                            <div class="footer-left-icon">${headerLeft}</div>
-                            <div class="footer-icons">${headerMainIcons}</div>
-                            <div class="footer-right-icon">${headerRight}</div>
-                        </div>
-                    `;
-
-                    setHeaderContent(
-                        <div dangerouslySetInnerHTML={{ __html: modifiedContent }} />
-                    );
-                } else {
-                    setHeaderContent(null);
-                }
+                setShowHeaderContent(!entry.isIntersecting);
             },
             { root: null, threshold: 0 }
         );
@@ -43,9 +28,32 @@ export default function Footer() {
     }, []);
 
     return (
-        <footer className="footer">
-            <div className="footer-title">HOUGUET Maxime Portfolio</div>
-            {headerContent && <div className="footer-dynamic-content">{headerContent}</div>}
+        <footer className="footer footer-component">
+            {/* Cache le titre si showHeaderContent est actif */}
+            {!showHeaderContent && (
+                <div className="footer-title">HOUGUET Maxime Portfolio</div>
+            )}
+            {showHeaderContent && (
+                <div className="footer-dynamic-content">
+                    <div className="footer-left-icon">
+                        <HeaderLeft />
+                    </div>
+                    <div className="footer-header-content">
+                        <a href="https://github.com/MaximeH2024" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faGithub} size="lg" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/maxime-houguet-dev" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                        </a>
+                        <a href="mailto:houguetm.pro@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faEnvelope} size="lg" />
+                        </a>
+                    </div>
+                    <div className="footer-right-icon">
+                        <HeaderRight />
+                    </div>
+                </div>
+            )}
         </footer>
     );
 }

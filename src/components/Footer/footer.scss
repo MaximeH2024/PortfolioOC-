@@ -3,55 +3,122 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #1a1a1a; /* Couleur de fond */
+    background-color: rgba(26, 26, 26, 1); /* Fond solide */
     color: #fff;
     display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    justify-content: space-between; /* Répartition équilibrée des éléments */
+    justify-content: space-between; /* Distribution en ligne */
     align-items: center;
-    padding: 10px 20px; /* Ajoute de l'espace pour respirer */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-top: 1px solid #0095FF;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    gap: 10px; /* Ajoute un espacement entre les éléments */
-    text-align: center; /* Centre le texte si les éléments passent à la ligne */
+    font-size: 0.8rem;
+    flex-wrap: nowrap; /* Empêche le wrap, reste en ligne */
 }
 
-.footer-title {
-    font-size: 1rem; /* Ajuste la taille du texte pour éviter qu'il ne déborde */
-    font-weight: bold;
-    flex: 1 1 auto; /* Permet au titre de s'adapter à l'espace disponible */
-    text-align: center; /* Centre le texte */
-}
-
-.footer-dynamic-content {
+/* Neutraliser les styles du header */
+.footer .header-left,
+.footer .header-right {
     display: flex;
-    flex-wrap: wrap; /* Autorise les éléments à passer à la ligne */
-    gap: 15px; /* Espace entre les icônes et le texte */
-    justify-content: center; /* Centre le contenu dans la zone disponible */
+    flex-direction: row !important; /* Toujours en ligne */
+    justify-content: center;
     align-items: center;
-    flex: 2 1 auto; /* Prend plus de place que le titre si nécessaire */
+    gap: 10px; /* Espacement spécifique au footer */
+    padding: 0; /* Supprime le padding hérité */
+    max-width: none; /* Annule les restrictions de largeur */
 }
 
-.footer-header-content {
-    display: flex;
-    flex-wrap: wrap; /* Les icônes passent à la ligne si besoin */
-    gap: 15px; /* Espacement entre les groupes d'icônes */
-    justify-content: center; /* Centre le contenu dans l'espace disponible */
+.footer .header-main {
+    max-width: none; /* Annule les restrictions de largeur */
+    border: none; /* Supprime les bordures définies dans le header */
+    justify-content: center;
     align-items: center;
 }
 
-.footer-left-icon {
-    border-right: 2px dotted white; /* Bordure visuelle pour séparer */
-    padding-right: 15px;
-    gap: 5px;
+/* Styles spécifiques à la classe footer-component */
+.footer-component .footer-title {
+    font-size: 0.9rem;
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenu dynamique (HeaderLeft, HeaderRight, icônes) */
+.footer-component .footer-dynamic-content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Les éléments à l'intérieur passent à la ligne */
+    flex: 1 1 auto;
+    gap: 10px;
 }
-.footer-right-icon {
-    gap: 5px;
+
+/* Alignement horizontal forcé pour les éléments dans le footer */
+.footer-component .footer-left-icon,
+.footer-component .footer-right-icon,
+.footer-component .footer-header-content {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 auto;
+    flex-direction: row !important; /* Forcé en ligne */
 }
-.footer-header-content img {
-    display: none;
+
+/* Liens et icônes */
+.footer-component a {
+    color: #0095FF;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.footer-component a:hover {
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-component {
+        padding: 5px;
+        font-size: 0.7rem; /* Réduit légèrement la taille du texte */
+    }
+
+    .footer-component .footer-title {
+        font-size: 0.8rem;
+    }
+
+    .footer-component .footer-dynamic-content {
+        gap: 5px;
+    }
+
+    .footer-component .footer-left-icon,
+    .footer-component .footer-right-icon,
+    .footer-component .footer-header-content {
+        flex: 1 1 auto;
+        flex-direction: row !important; /* Toujours en ligne, même sur petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-component {
+        padding: 5px;
+        font-size: 0.6rem;
+    }
+
+    .footer-component .footer-left-icon,
+    .footer-component .footer-right-icon,
+    .footer-component .footer-header-content {
+        gap: 2px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer-component {
+        padding: 3px;
+        font-size: 0.5rem;
+    }
+
+    .footer-component .footer-header-content {
+        gap: 2px;
+    }
 }
