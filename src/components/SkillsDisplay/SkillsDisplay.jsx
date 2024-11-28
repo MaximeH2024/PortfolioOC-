@@ -5,6 +5,7 @@ import { faDatabase, faGlobe, faServer, faTable, faChartLine, faBrain, faUnivers
 import { faReact, faCss3Alt, faJs, faHtml5, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import skillsData from '../../data/skills.json';
 import { useLanguage } from '../../context/LanguageContext';
+import frontEndLogo from '../../assets/front-end-logo.png';
 
 export default function SkillsDisplay() {
     const { language } = useLanguage();
@@ -38,7 +39,7 @@ export default function SkillsDisplay() {
                             <div className="rotating-border"></div>
                             <div className="rotating-border secondary"></div>
                             <div className="circle-content">
-                                <img src="src/assets/front-end-logo.png" alt="front-end-logo" />
+                                <img src={frontEndLogo} alt="front-end-logo" />
                                 <p><strong>{language === 'fr' ? 'Front-End' : 'Front-End'}</strong></p>
                             </div>
                             <div className="circle-icons-container">

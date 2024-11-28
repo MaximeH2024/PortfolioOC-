@@ -21,7 +21,7 @@ function App() {
                         <ResumeDisplay />
                     </section>
                     <section id='skills'>
-                    <SkillsDisplay />
+                        <SkillsDisplay />
                     </section>
                 </div>
                 <div className="img-background">

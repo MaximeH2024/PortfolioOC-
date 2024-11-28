@@ -7,6 +7,8 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import frenchFlag from '../../assets/french_flag.png';
+import englishFlag from '../../assets/english_flag.png';
 export default function HeaderMain({ isMobile }) {
     const { toggleLanguage, translations, language } = useLanguage();
 
@@ -33,12 +35,12 @@ export default function HeaderMain({ isMobile }) {
                             </a>
                         </div>
                         <img
-                            src='../src/assets/french_flag.png'
+                            src={frenchFlag}
                             alt='French Flag'
                             onClick={() => toggleLanguage('fr')}
                         />
                         <img
-                            src='../src/assets/english_flag.png'
+                            src={englishFlag}
                             alt='English Flag'
                             onClick={() => toggleLanguage('en')}
                         />

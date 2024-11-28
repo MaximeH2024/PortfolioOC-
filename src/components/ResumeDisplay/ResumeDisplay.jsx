@@ -4,6 +4,7 @@ import './resume-display.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../../context/LanguageContext';
+import folderImg from '../../assets/folder.png';
 
 Modal.setAppElement('#root'); // Pour l'accessibilité
 
@@ -51,7 +52,7 @@ export default function ResumeDisplay() {
                     <p>{translations[language].resumeCTA}</p>
                     <FontAwesomeIcon icon={faArrowDown} className='arrow-icon'/>
                     <img 
-                        src="/src/assets/folder.png" 
+                        src={folderImg} 
                         alt="Resume" 
                         onClick={openModal}
                     />

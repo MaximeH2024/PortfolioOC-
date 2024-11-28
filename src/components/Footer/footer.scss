@@ -8,7 +8,6 @@
     display: flex;
     justify-content: space-between; /* Distribution en ligne */
     align-items: center;
-    padding: 5px 10px;
     border-top: 1px solid #0095FF;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
@@ -23,7 +22,7 @@
     flex-direction: row !important; /* Toujours en ligne */
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Espacement spécifique au footer */
+    gap: 5px; /* Espacement spécifique au footer */
     padding: 0; /* Supprime le padding hérité */
     max-width: none; /* Annule les restrictions de largeur */
 }
@@ -69,7 +68,7 @@
 .footer-component a {
     color: #0095FF;
     transition: color 0.3s ease;
-    font-size: 0.9rem;
+    font-size: calc(0.2rem + 1vw);
 }
 
 .footer-component a:hover {
@@ -80,11 +79,10 @@
 @media (max-width: 768px) {
     .footer-component {
         padding: 5px;
-        font-size: 0.7rem; /* Réduit légèrement la taille du texte */
     }
 
     .footer-component .footer-title {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .footer-component .footer-dynamic-content {
@@ -101,21 +99,19 @@
 
 @media (max-width: 480px) {
     .footer-component {
-        padding: 5px;
-        font-size: 0.6rem;
+        padding: 4px;
     }
 
     .footer-component .footer-left-icon,
     .footer-component .footer-right-icon,
     .footer-component .footer-header-content {
-        gap: 2px;
+        gap: 0;
     }
 }
 
 @media (max-width: 320px) {
     .footer-component {
         padding: 3px;
-        font-size: 0.5rem;
     }
 
     .footer-component .footer-header-content {
