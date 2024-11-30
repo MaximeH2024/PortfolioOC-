@@ -3,7 +3,7 @@ import { db } from "../../utils/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useLanguage } from "../../context/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCode, faCircleCheck, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./project-display.scss";
 import openclassroomLogo from "../../assets/openclassroom_logo.webp";
@@ -64,6 +64,16 @@ function ProjectDisplay() {
                 className="github-link"
               >
                 <FontAwesomeIcon icon={faGithub} className="github-icon" />
+              </a>
+            )}
+            {project.website_link && (
+              <a
+                href={project.website_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="website-link"
+              >
+                <FontAwesomeIcon icon={faGlobe} className="website-icon" />
               </a>
             )}
           </div>

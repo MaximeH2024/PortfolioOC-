@@ -11,19 +11,23 @@ export default function Footer() {
 
     useEffect(() => {
         const header = document.querySelector('.header');
+    
+        // Vérifier si l'élément existe avant d'attacher l'observateur
+        if (!header) return;
+    
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setShowHeaderContent(!entry.isIntersecting);
             },
             { root: null, threshold: 0 }
         );
-
-        if (header) {
-            observer.observe(header);
-        }
-
+    
+        observer.observe(header);
+    
         return () => {
+            // Vérification supplémentaire avant de détacher l'observateur
             if (header) observer.unobserve(header);
+            observer.disconnect();
         };
     }, []);
 

@@ -153,4 +153,18 @@
     .github-link:hover .github-icon {
       color: #6e5494; /* Couleur typique de GitHub */
     }
+    
+    .website-link {
+      margin-left: 8px;
+      color: #007bff; // Couleur de l'icône
+      transition: color 0.3s;
+    }
+    
+    .website-link:hover {
+      color: #0056b3; // Couleur au survol
+    }
+    
+    .website-icon {
+      font-size: 1.5rem;
+    }
   }

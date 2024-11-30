@@ -25,15 +25,17 @@ export default function ResumeDisplay() {
                 threshold: 0.2,
             }
         );
-
-        if (ref.current) {
-            observer.observe(ref.current);
+    
+        const currentRef = ref.current;
+        if (currentRef) {
+            observer.observe(currentRef);
         }
-
+    
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
+            observer.disconnect();
         };
     }, []);
 
@@ -48,9 +50,9 @@ export default function ResumeDisplay() {
         >
             {isVisible && (
                 <div className="letter">
-                    <p>{translations[language].resumeTitle}</p>
-                    <p>{translations[language].resumeCTA}</p>
-                    <FontAwesomeIcon icon={faArrowDown} className='arrow-icon'/>
+                    <p>{translations[language]?.resumeTitle || 'Loading...'}</p>
+                    <p>{translations[language]?.resumeCTA || 'Loading...'}</p>
+                    <FontAwesomeIcon icon={faArrowDown} className='arrow-icon' />
                     <img 
                         src={folderImg} 
                         alt="Resume" 
@@ -58,7 +60,6 @@ export default function ResumeDisplay() {
                     />
                 </div>
             )}
-
             {/* Modale pour afficher le PDF */}
             <Modal
                 isOpen={isModalOpen}
