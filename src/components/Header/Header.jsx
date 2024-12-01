@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import HeaderLeft from '../headerLeft/headerLeft';
+import HeaderLeft from '../HeaderLeft/headerLeft.jsx';
 import HeaderMain from '../HeaderMain/HeaderMain';
-import HeaderRight from '../headerRight/headerRight';
+import HeaderRight from '../HeaderRight/HeaderRight.jsx';
 import './header.scss';
 
 export default function Header() {

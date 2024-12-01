@@ -3,39 +3,40 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(26, 26, 26, 1); /* Fond solide */
+    background-color: rgba(26, 26, 26, 1);
     color: #fff;
     display: flex;
-    justify-content: space-between; /* Distribution en ligne */
+    justify-content: space-between;
     align-items: center;
     border-top: 1px solid #0095FF;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     font-size: 0.8rem;
-    flex-wrap: nowrap; /* Empêche le wrap, reste en ligne */
+    flex-wrap: nowrap;
 }
 
-/* Neutraliser les styles du header */
 .footer .header-left,
 .footer .header-right {
     display: flex;
     flex-direction: row !important; /* Toujours en ligne */
     justify-content: center;
     align-items: center;
-    gap: 5px; /* Espacement spécifique au footer */
-    padding: 0; /* Supprime le padding hérité */
-    max-width: none; /* Annule les restrictions de largeur */
+    font-family: "Roboto", serif !important;
+    gap: 5px;
+    font-size: 10px;
+    padding: 0;
+    max-width: none;
 }
 
 .footer .header-main {
-    max-width: none; /* Annule les restrictions de largeur */
-    border: none; /* Supprime les bordures définies dans le header */
+    max-width: none;
+    border: none;
     justify-content: center;
     align-items: center;
 }
 
-/* Styles spécifiques à la classe footer-component */
 .footer-component .footer-title {
+    font-family: "Roboto", serif;
     font-size: 0.9rem;
     flex: 1 1 auto;
     text-align: center;
@@ -43,7 +44,6 @@
     padding: 0;
 }
 
-/* Contenu dynamique (HeaderLeft, HeaderRight, icônes) */
 .footer-component .footer-dynamic-content {
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,6 @@
     gap: 10px;
 }
 
-/* Alignement horizontal forcé pour les éléments dans le footer */
 .footer-component .footer-left-icon,
 .footer-component .footer-right-icon,
 .footer-component .footer-header-content {
@@ -64,18 +63,17 @@
     flex-direction: row !important; /* Forcé en ligne */
 }
 
-/* Liens et icônes */
 .footer-component a {
     color: #0095FF;
     transition: color 0.3s ease;
-    font-size: calc(0.2rem + 1vw);
+    font-size: calc(0.05rem + 1vw);
+    font-family: "Roboto", serif;
 }
 
 .footer-component a:hover {
     color: #fff;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-component {
         padding: 5px;

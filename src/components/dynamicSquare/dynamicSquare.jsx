@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './DynamicSquare.scss';
+import './dynamicSquare.scss';
 
 export default function DynamicSquare() {
     const [columns, setColumns] = useState(() => {

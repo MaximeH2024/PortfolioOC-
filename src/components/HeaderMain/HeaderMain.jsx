@@ -1,8 +1,8 @@
-import DynamicSquare from '../dynamicSquare/dynamicSquare';
+import DynamicSquare from '../dynamicSquare/dynamicSquare.jsx';
 import './header-main.scss';
 import { useLanguage } from '../../context/LanguageContext';
-import HeaderLeft from '../HeaderLeft/HeaderLeft';
-import HeaderRight from '../HeaderRight/HeaderRight';
+import HeaderLeft from '../HeaderLeft/HeaderLeft.jsx';
+import HeaderRight from '../HeaderRight/HeaderRight.jsx';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';

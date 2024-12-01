@@ -21,7 +21,13 @@ export default function HeaderRight() {
         <div className="header-right">
             <a href="#formation">{translations[language].education}</a>
             <a href="#projects">{translations[language].projects}</a>
-            <a onClick={openModal} style={{ cursor: 'pointer' }}>
+            <a 
+                href="#" 
+                onClick={(e) => { e.preventDefault(); openModal(); }} 
+                role="button" 
+                aria-controls="contact-modal" 
+                style={{ cursor: 'pointer' }}
+            >
                 {translations[language].contact}
             </a>
 
@@ -30,6 +36,7 @@ export default function HeaderRight() {
                 onRequestClose={closeModal}
                 className="modal"
                 overlayClassName="overlay"
+                id="contact-modal"
             >
                 <div className="modal-content">
                     <h2>Contact</h2>
