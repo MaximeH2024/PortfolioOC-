@@ -1,70 +1,49 @@
 import { useEffect, useRef, useState } from 'react';
-import Modal from 'react-modal';
 import './resume-display.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../../context/LanguageContext';
 import folderImg from '../../assets/folder.png';
-
-Modal.setAppElement('#root'); // Pour l'accessibilité
+import CustomModal from '../../utils/CustomModal.jsx';
 
 export default function ResumeDisplay() {
     const [isVisible, setIsVisible] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false); // État pour la modale
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const ref = useRef(null);
     const { language, translations } = useLanguage();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsVisible(entry.isIntersecting);
-            },
-            {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.2,
-            }
+            ([entry]) => setIsVisible(entry.isIntersecting),
+            { root: null, threshold: 0.2 }
         );
-    
+
         const currentRef = ref.current;
-        if (currentRef) {
-            observer.observe(currentRef);
-        }
-    
+        if (currentRef) observer.observe(currentRef);
+
         return () => {
-            if (currentRef) {
-                observer.unobserve(currentRef);
-            }
+            if (currentRef) observer.unobserve(currentRef);
             observer.disconnect();
         };
     }, []);
 
-    // Fonction pour ouvrir et fermer la modale
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
     return (
-        <div
-            className={`resume-display ${isVisible ? 'animate' : ''}`}
-            ref={ref}
-        >
+        <div className={`resume-display ${isVisible ? 'animate' : ''}`} ref={ref}>
             {isVisible && (
                 <div className="letter">
                     <p>{translations[language]?.resumeTitle || 'Loading...'}</p>
                     <p>{translations[language]?.resumeCTA || 'Loading...'}</p>
-                    <FontAwesomeIcon icon={faArrowDown} className='arrow-icon' />
-                    <img 
-                        src={folderImg} 
-                        alt="Resume" 
-                        onClick={openModal}
-                    />
+                    <FontAwesomeIcon icon={faArrowDown} className="arrow-icon" />
+                    <img src={folderImg} alt="Resume" onClick={openModal} />
                 </div>
             )}
-            {/* Modale pour afficher le PDF */}
-            <Modal
+
+            <CustomModal
                 isOpen={isModalOpen}
                 onRequestClose={closeModal}
-                contentLabel="Resume PDF"
                 className="pdf-modal"
                 overlayClassName="pdf-modal-overlay"
             >
@@ -76,7 +55,7 @@ export default function ResumeDisplay() {
                     title="CV Maxime HOUGUET"
                     style={{ border: 'none' }}
                 />
-            </Modal>
+            </CustomModal>
         </div>
     );
 }

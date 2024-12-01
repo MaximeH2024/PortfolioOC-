@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import './header-right.scss';
-import Modal from 'react-modal';
 import { useLanguage } from '../../context/LanguageContext';
-
-Modal.setAppElement('#root'); // Pour éviter les avertissements de react-modal
+import CustomModal from '../../utils/CustomModal.jsx';
 
 export default function HeaderRight() {
     const { language } = useLanguage();
@@ -26,37 +24,61 @@ export default function HeaderRight() {
                 onClick={(e) => { e.preventDefault(); openModal(); }} 
                 role="button" 
                 aria-controls="contact-modal" 
+                aria-expanded={isModalOpen} 
                 style={{ cursor: 'pointer' }}
             >
                 {translations[language].contact}
             </a>
 
-            <Modal
+            <CustomModal
                 isOpen={isModalOpen}
                 onRequestClose={closeModal}
                 className="modal"
                 overlayClassName="overlay"
                 id="contact-modal"
+                aria={{
+                    hidden: !isModalOpen,
+                    labelledby: 'contact-modal-title',
+                }}
             >
                 <div className="modal-content">
-                    <h2>Contact</h2>
-                    <p>Houguet Maxime, 34 ans</p>
+                    <h3 id="contact-modal-title">Contact</h3>
                     <p>
                         GitHub :
-                        <a href="https://github.com/MaximeH2024" target="_blank" rel="noopener noreferrer">
-                             MaximeH2024
+                        <a 
+                            href="https://github.com/MaximeH2024" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Visitez mon profil GitHub"
+                        >
+                            MaximeH2024
                         </a>
                     </p>
                     <p>
                         LinkedIn : 
-                        <a href="https://www.linkedin.com/in/maxime-houguet-dev" target="_blank" rel="noopener noreferrer">
-                             Maxime Houguet
+                        <a 
+                            href="https://www.linkedin.com/in/maxime-houguet-dev" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Visitez mon profil LinkedIn"
+                        >
+                            Maxime Houguet
                         </a>
                     </p>
-                    <p>Email :<a href="mailto:houguetm.pro@gmail.com">houguetm.pro@gmail.com</a></p>
-                    <button onClick={closeModal}>Fermer</button>
+                    <p>
+                        Email :
+                        <a 
+                            href="mailto:houguetm.pro@gmail.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Envoyer un email à houguetm.pro@gmail.com"
+                        >
+                            houguetm.pro@gmail.com
+                        </a>
+                    </p>
+                    <button onClick={closeModal} aria-label="Fermer le modal">Fermer</button>
                 </div>
-            </Modal>
+            </CustomModal>
         </div>
     );
 }

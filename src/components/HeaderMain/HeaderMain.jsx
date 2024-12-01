@@ -24,13 +24,28 @@ export default function HeaderMain({ isMobile }) {
                 <h1><strong>{translations[language].title}</strong></h1>
                 <div className='header-main-icon'>
                     <div className='header-main-link'>
-                            <a href="https://github.com/MaximeH2024" target="_blank" rel="noopener noreferrer">
+                            <a 
+                                href="https://github.com/MaximeH2024" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                aria-label="Visitez mon profil GitHub"
+                            >
                                 <FontAwesomeIcon icon={faGithub} size='2x' />
                             </a>
-                            <a href="https://www.linkedin.com/in/maxime-houguet-dev" target="_blank" rel="noopener noreferrer">
+                            <a 
+                                href="https://www.linkedin.com/in/maxime-houguet-dev" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                aria-label="Visitez mon profil LinkedIn"
+                            >
                                 <FontAwesomeIcon icon={faLinkedin} size='2x' />
                             </a>
-                            <a href="mailto:houguetm.pro@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <a 
+                                href="mailto:houguetm.pro@gmail.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                aria-label="Envoyer un email à houguetm.pro@gmail.com"
+                            >
                                 <FontAwesomeIcon icon={faEnvelope} size='2x' />
                             </a>
                         </div>

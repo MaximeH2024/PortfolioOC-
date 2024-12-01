@@ -5,16 +5,23 @@ import CaseSensitivePathsWebpackPlugin from 'case-sensitive-paths-webpack-plugin
 
 export default {
   mode: 'production',
-  entry: './src/main.jsx', // Chemin vers le fichier d'entrée principal
+  entry: './src/main.jsx',
+  devtool: 'source-map',
   output: {
     path: path.resolve('dist'),
-    filename: 'main.js', // Nom du fichier JavaScript de sortie
+    filename: '[name].[contenthash].js', // Utilisez des noms uniques pour chaque chunk
+    chunkFilename: '[name].[contenthash].js', // Noms des chunks dynamiquement générés
     assetModuleFilename: 'assets/[hash][ext][query]', // Organisation des fichiers d'assets
+    clean: true, // Supprime les anciens fichiers dans le dossier de sortie avant chaque build
   },
   resolve: {
     extensions: ['.js', '.jsx'], // Extensions supportées
   },
   optimization: {
+    splitChunks: {
+      chunks: 'all', // Active le découpage des chunks
+      automaticNameDelimiter: '-', // Délimiteur pour les noms automatiques des chunks
+    },
     minimize: true,
     minimizer: [
       new TerserPlugin({

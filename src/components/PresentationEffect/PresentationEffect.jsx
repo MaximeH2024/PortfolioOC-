@@ -34,7 +34,7 @@ export default function PresentationEffect() {
 
     return (
         <div className="presentation-effect">
-            <img src={headPicture} alt="Test" className="fixed-image" />
+            <img src={headPicture} alt="effet de présentation" className="fixed-image" />
 
             {/* Affichage dynamique dans PresentationTextDisplay */}
             <PresentationTextDisplay

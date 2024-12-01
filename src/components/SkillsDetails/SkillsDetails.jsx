@@ -25,7 +25,7 @@ export default function SkillsDetails({ title, skills, color }) {
                 className={`skills-details ${isOpen ? "open" : "closed"}`}
                 style={{ borderColor: color }}
             >
-                <h4 style={{ borderColor: color }}>{title}</h4>
+                <h3 style={{ borderColor: color }}>{title}</h3>
                 <ul>
                     {Object.entries(skills).map(([, { name, description }], index) => (
                         <li key={index}>
@@ -40,6 +40,6 @@ export default function SkillsDetails({ title, skills, color }) {
 
 SkillsDetails.propTypes = {
     title: PropTypes.string.isRequired,
-    skills: PropTypes.object.isRequired, // Chaque compétence contient un `name` et une `description`
+    skills: PropTypes.object.isRequired,
     color: PropTypes.string.isRequired,
 };

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import HeaderLeft from '../HeaderLeft/HeaderLeft';
-import HeaderRight from '../HeaderRight/HeaderRight';
+import HeaderLeft from '../HeaderLeft/HeaderLeft.jsx';
+import HeaderRight from '../HeaderRight/HeaderRight.jsx';
 import './footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -43,13 +43,28 @@ export default function Footer() {
                         <HeaderLeft />
                     </div>
                     <div className="footer-header-content">
-                        <a href="https://github.com/MaximeH2024" target="_blank" rel="noopener noreferrer">
+                        <a 
+                            href="https://github.com/MaximeH2024" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Visitez mon profil GitHub"
+                        >
                             <FontAwesomeIcon icon={faGithub} size="lg" />
                         </a>
-                        <a href="https://www.linkedin.com/in/maxime-houguet-dev" target="_blank" rel="noopener noreferrer">
+                        <a 
+                            href="https://www.linkedin.com/in/maxime-houguet-dev" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Visitez mon profil LinkedIn"
+                        >
                             <FontAwesomeIcon icon={faLinkedin} size="lg" />
                         </a>
-                        <a href="mailto:houguetm.pro@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <a 
+                            href="mailto:houguetm.pro@gmail.com" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Envoyer un email à houguetm.pro@gmail.com"
+                        >
                             <FontAwesomeIcon icon={faEnvelope} size="lg" />
                         </a>
                     </div>

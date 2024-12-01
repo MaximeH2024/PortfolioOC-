@@ -45,7 +45,7 @@ function ProjectDisplay() {
           <div className="project-icons">
             <img
               src={project.type.fr === "formation" ? openclassroomLogo : null}
-              alt="Type Logo"
+              alt="Logo Openclassroom"
               className="type-logo"
               style={{ display: project.type.fr === "formation" ? "inline-block" : "none" }}
             />
@@ -57,24 +57,26 @@ function ProjectDisplay() {
               className={`status-icon ${project.status.en === "Validated" ? "validated" : "not-validated"}`}
             />
             {project.github_link && (
-              <a
-                href={project.github_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="github-link"
-              >
-                <FontAwesomeIcon icon={faGithub} className="github-icon" />
-              </a>
+                <a 
+                    href={project.github_link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="github-link" 
+                    aria-label={`Voir le code source du projet ${project.name[language]} sur GitHub`}
+                >
+                    <FontAwesomeIcon icon={faGithub} className="github-icon" />
+                </a>
             )}
             {project.website_link && (
-              <a
-                href={project.website_link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="website-link"
-              >
-                <FontAwesomeIcon icon={faGlobe} className="website-icon" />
-              </a>
+                <a 
+                    href={project.website_link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="website-link" 
+                    aria-label={`Visitez le site web du projet ${project.name[language]}`}
+                >
+                    <FontAwesomeIcon icon={faGlobe} className="website-icon" />
+                </a>
             )}
           </div>
 
