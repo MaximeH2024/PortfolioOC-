@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     background-color: rgba(26, 26, 26, 1);
-    color: #fff;
+    color: #0095FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,6 +68,7 @@
     transition: color 0.3s ease;
     font-size: calc(0.05rem + 1vw);
     font-family: "Roboto", serif;
+    border: none;
 }
 
 .footer-component a:hover {
